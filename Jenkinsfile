@@ -35,7 +35,7 @@ pipeline {
                 echo "🚚 Deploying frontend to ${FRONTEND_TARGET}..."
                 sh '''
                     rm -rf ${FRONTEND_TARGET}/*
-                    cp -r ${FRONTEND_DIR}/build/* ${FRONTEND_TARGET}/
+                    cp -r ${WORKSPACE}/${FRONTEND_DIR}/dist/* ${FRONTEND_TARGET}/
                 '''
             }
         }
