@@ -17,7 +17,7 @@ const AuthSuccess = () => {
             if (accessToken) {
                 localStorage.setItem("accessToken", accessToken)
                 try {
-                    const res = await axios.get("http://localhost:8000/auth/me", {
+                    const res = await axios.get("http://3.26.153.200/auth/me", {
                         headers: {
                             Authorization: `Bearer ${accessToken}`
                         }

@@ -11,10 +11,20 @@ const app = express()
 const PORT = process.env.PORT || 3000
 
 app.use(express.json())
+const frontendOrigin = process.env.NODE_ENV === 'production' 
+    ? 'http://3.26.153.200'  // hosted frontend
+    : 'http://localhost:5173';     // local dev frontend
+
 app.use(cors({
-    origin:'http://localhost:5173',
-    credentials:true
-}))
+    origin: frontendOrigin,
+    credentials: true
+}));
+
+
+app.use(cors({
+    origin: frontendOrigin,
+    credentials: true
+}));
 
 app.use('/auth', authRoute)
 app.use('/user', userRoute)
