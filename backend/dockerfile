@@ -14,7 +14,7 @@ RUN npm install --production
 COPY . .
 
 # Expose the backend port (adjust if not 5000)
-EXPOSE 5000
+EXPOSE 8000
 
 # Start the backend
 CMD ["npm", "start"]
