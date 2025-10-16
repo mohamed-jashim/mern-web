@@ -75,6 +75,7 @@ pipeline {
                     docker run -d \
                         --name ${BACKEND_CONTAINER} \
                         --restart always \
+                        --env-file ${WORKSPACE}/${BACKEND_DIR}/.env \
                         -p ${BACKEND_PORT}:8000 \
                         ${BACKEND_IMAGE}
                 '''
