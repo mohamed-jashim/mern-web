@@ -41,7 +41,7 @@ const Signup = () => {
         console.log(formData);
         try {
             setIsLoading(true)
-            const res = await axios.post(`http://3.26.153.200/user/register`, formData,{
+            const res = await axios.post(`http://3.26.153.200:8000/user/register`, formData,{
                 headers:{
                     "Content-Type":"application/json"
                 }

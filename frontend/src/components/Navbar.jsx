@@ -21,7 +21,7 @@ const Navbar = () => {
 
     const logoutHandler = async()=>{
         try {
-            const res = await axios.post(`http://3.26.153.200/user/logout`,{},{
+            const res = await axios.post(`http://3.26.153.200:8000/user/logout`,{},{
                 headers:{
                     Authorization:`Bearer ${accessToken}`
                 }
