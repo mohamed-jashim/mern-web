@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 3000
 
 app.use(express.json())
 const frontendOrigin = process.env.NODE_ENV === 'production' 
-    ? 'http://3.26.153.200'  // hosted frontend
+    ? 'http://3.26.153.200:7000'  // hosted frontend
     : 'http://localhost:5173';     // local dev frontend
 
 app.use(cors({
